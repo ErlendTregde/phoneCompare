@@ -1,0 +1,769 @@
+[
+  {
+    "brand": "Huawei",
+    "model": "Pura 80 Ultra",
+    "slug": "huawei_pura_80_ultra",
+    "release_date": "2025-06-11",
+    "dimensions": {
+      "height_mm": 163,
+      "width_mm": 76.1,
+      "depth_mm": 8.3,
+      "weight_g": 233.5
+    },
+    "display": {
+      "size_inches": 6.8,
+      "resolution": "1276x2848",
+      "ppi": 459,
+      "type": "LTPO OLED",
+      "refresh_rate_hz": 120,
+      "features": [
+        "HDR",
+        "1B colors",
+        "3000 nits (peak)",
+        "1440Hz PWM"
+      ],
+      "protection": "Kunlun Glass 2"
+    },
+    "platform": {
+      "os": [
+        "EMUI 14.2",
+        "HarmonyOS 5.1"
+      ],
+      "chipset": "Kirin 9020",
+      "cpu": "Octa-core (1x2.5 GHz + 3x2.15 GHz + 4x1.6GHz)",
+      "gpu": "Maleoon 920"
+    },
+    "memory": {
+      "card_slot": false,
+      "ram_gb": 16,
+      "storage_gb": [
+        512,
+        1024
+      ]
+    },
+    "camera": {
+      "rear": [
+        "50 MP wide f/1.6-4.0, 1.0\" OIS",
+        "50 MP telephoto f/2.4, 3.7x zoom, OIS",
+        "12.5 MP telephoto f/3.6, 9.4x zoom, OIS",
+        "40 MP ultrawide f/2.2"
+      ],
+      "rear_features": [
+        "Laser AF",
+        "color spectrum",
+        "LED flash",
+        "panorama",
+        "HDR"
+      ],
+      "rear_video": [
+        "4K",
+        "1080p",
+        "960fps",
+        "HDR Vivid",
+        "gyro-EIS"
+      ],
+      "front": "13 MP ultrawide f/2.0, AF",
+      "front_video": [
+        "4K",
+        "1080p",
+        "240fps",
+        "HDR Vivid",
+        "gyro-EIS"
+      ]
+    },
+    "battery": {
+      "type": "Li-Po",
+      "capacity_mah": 5700,
+      "charging": {
+        "wired_w": 100,
+        "wireless_w": 80,
+        "reverse_wireless_w": 20,
+        "reverse_wired_w": 18
+      }
+    },
+    "connectivity": {
+      "network": [
+        "GSM",
+        "CDMA",
+        "HSPA",
+        "LTE",
+        "5G"
+      ],
+      "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6/7",
+      "bluetooth": "5.2",
+      "nfc": true,
+      "usb": "USB Type-C 3.1, OTG, DisplayPort 1.2",
+      "infrared": true,
+      "radio": false,
+      "satellite": "BDS Satellite Calling (China only)"
+    },
+    "sensors": [
+      "Fingerprint (side-mounted)",
+      "Accelerometer",
+      "Gyro",
+      "Proximity",
+      "Compass",
+      "Barometer"
+    ],
+    "sim": "Nano-SIM + Nano-SIM",
+    "ip_rating": "IP68/IP69",
+    "build": "Glass front, aluminum frame, glass back",
+    "colors": [
+      "Gold",
+      "Black"
+    ],
+    "price_eur": 1220,
+    "image_url": "https://fdn2.gsmarena.com/vv/pics/huawei/huawei-pura80ultra.jpg",
+    "created_at": "2025-06-12T16:26:55.975088Z"
+  },
+  {
+    "brand": "Samsung",
+    "model": "Galaxy S24 Ultra",
+    "slug": "samsung_galaxy_s24_ultra",
+    "release_date": "2024-01-17",
+    "dimensions": {
+      "height_mm": 162.3,
+      "width_mm": 79,
+      "depth_mm": 8.6,
+      "weight_g": 232
+    },
+    "display": {
+      "size_inches": 6.8,
+      "resolution": "1440x3120",
+      "ppi": 505,
+      "type": "Dynamic LTPO AMOLED 2X",
+      "refresh_rate_hz": 120,
+      "features": [
+        "HDR10+",
+        "2600 nits peak",
+        "Always-on display"
+      ],
+      "protection": "Gorilla Glass Armor"
+    },
+    "platform": {
+      "os": [
+        "Android 14",
+        "One UI 6.1"
+      ],
+      "chipset": "Snapdragon 8 Gen 3",
+      "cpu": "Octa-core",
+      "gpu": "Adreno 750"
+    },
+    "memory": {
+      "card_slot": false,
+      "ram_gb": 12,
+      "storage_gb": [
+        256,
+        512,
+        1024
+      ]
+    },
+    "camera": {
+      "rear": [
+        "200 MP wide",
+        "50 MP periscope telephoto",
+        "10 MP telephoto",
+        "12 MP ultrawide"
+      ],
+      "rear_features": [
+        "PDAF",
+        "Laser AF",
+        "OIS",
+        "LED flash",
+        "panorama",
+        "HDR"
+      ],
+      "rear_video": [
+        "8K",
+        "4K",
+        "1080p",
+        "HDR10+",
+        "gyro-EIS"
+      ],
+      "front": "12 MP f/2.2",
+      "front_video": [
+        "4K",
+        "1080p",
+        "HDR10+"
+      ]
+    },
+    "battery": {
+      "type": "Li-Ion",
+      "capacity_mah": 5000,
+      "charging": {
+        "wired_w": 45,
+        "wireless_w": 15
+      }
+    },
+    "connectivity": {
+      "network": [
+        "GSM",
+        "CDMA",
+        "HSPA",
+        "EVDO",
+        "LTE",
+        "5G"
+      ],
+      "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7",
+      "bluetooth": "5.3",
+      "nfc": true,
+      "usb": "USB Type-C 3.2",
+      "infrared": false,
+      "radio": false,
+      "satellite": "n/a"
+    },
+    "sensors": [
+      "Fingerprint (under display, ultrasonic)",
+      "Accelerometer",
+      "Gyro",
+      "Proximity",
+      "Compass",
+      "Barometer"
+    ],
+    "sim": "Nano-SIM + eSIM",
+    "ip_rating": "IP68",
+    "build": "Titanium frame, Gorilla Glass front and back",
+    "colors": [
+      "Titanium Black",
+      "Titanium Gray",
+      "Titanium Violet",
+      "Titanium Yellow"
+    ],
+    "price_eur": 1449,
+    "image_url": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g.jpg",
+    "created_at": "2025-06-12T16:26:55.975105Z"
+  },
+  {
+    "brand": "Apple",
+    "model": "iPhone 15 Pro Max",
+    "slug": "apple_iphone_15_pro_max",
+    "release_date": "2023-09-22",
+    "dimensions": {
+      "height_mm": 159.9,
+      "width_mm": 76.7,
+      "depth_mm": 8.3,
+      "weight_g": 221
+    },
+    "display": {
+      "size_inches": 6.7,
+      "resolution": "1290x2796",
+      "ppi": 460,
+      "type": "LTPO Super Retina XDR OLED",
+      "refresh_rate_hz": 120,
+      "features": [
+        "HDR10",
+        "Dolby Vision",
+        "Always-on display"
+      ],
+      "protection": "Ceramic Shield glass"
+    },
+    "platform": {
+      "os": [
+        "iOS 17"
+      ],
+      "chipset": "Apple A17 Pro",
+      "cpu": "Hexa-core",
+      "gpu": "Apple GPU (6-core)"
+    },
+    "memory": {
+      "card_slot": false,
+      "ram_gb": 8,
+      "storage_gb": [
+        256,
+        512,
+        1024
+      ]
+    },
+    "camera": {
+      "rear": [
+        "48 MP wide",
+        "12 MP periscope telephoto",
+        "12 MP ultrawide"
+      ],
+      "rear_features": [
+        "TOF 3D LiDAR",
+        "Dual-LED flash",
+        "panorama",
+        "HDR"
+      ],
+      "rear_video": [
+        "4K",
+        "1080p",
+        "HDR",
+        "Dolby Vision HDR"
+      ],
+      "front": "12 MP f/1.9",
+      "front_video": [
+        "4K",
+        "1080p",
+        "HDR"
+      ]
+    },
+    "battery": {
+      "type": "Li-Ion",
+      "capacity_mah": 4422,
+      "charging": {
+        "wired_w": 20,
+        "wireless_w": 15
+      }
+    },
+    "connectivity": {
+      "network": [
+        "GSM",
+        "CDMA",
+        "HSPA",
+        "EVDO",
+        "LTE",
+        "5G"
+      ],
+      "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e",
+      "bluetooth": "5.3",
+      "nfc": true,
+      "usb": "USB Type-C 3.0",
+      "infrared": false,
+      "radio": false,
+      "satellite": "Emergency SOS via satellite"
+    },
+    "sensors": [
+      "Face ID",
+      "Accelerometer",
+      "Gyro",
+      "Proximity",
+      "Compass",
+      "Barometer"
+    ],
+    "sim": "Nano-SIM and eSIM",
+    "ip_rating": "IP68",
+    "build": "Titanium frame, Ceramic Shield front, glass back",
+    "colors": [
+      "Black Titanium",
+      "White Titanium",
+      "Blue Titanium",
+      "Natural Titanium"
+    ],
+    "price_eur": 1499,
+    "image_url": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max.jpg",
+    "created_at": "2023-09-22T10:00:00.000Z"
+  },
+  {
+    "brand": "Google",
+    "model": "Pixel 8 Pro",
+    "slug": "google_pixel_8_pro",
+    "release_date": "2023-10-12",
+    "dimensions": {
+      "height_mm": 162.6,
+      "width_mm": 76.5,
+      "depth_mm": 8.8,
+      "weight_g": 213
+    },
+    "display": {
+      "size_inches": 6.7,
+      "resolution": "1344x2992",
+      "ppi": 489,
+      "type": "LTPO OLED",
+      "refresh_rate_hz": 120,
+      "features": [
+        "HDR10+",
+        "2400 nits peak",
+        "Always-on display"
+      ],
+      "protection": "Corning Gorilla Glass Victus 2"
+    },
+    "platform": {
+      "os": [
+        "Android 14"
+      ],
+      "chipset": "Google Tensor G3",
+      "cpu": "Nona-core",
+      "gpu": "Immortalis-G715s MC10"
+    },
+    "memory": {
+      "card_slot": false,
+      "ram_gb": 12,
+      "storage_gb": [
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    "camera": {
+      "rear": [
+        "50 MP wide",
+        "48 MP telephoto",
+        "48 MP ultrawide"
+      ],
+      "rear_features": [
+        "Laser AF",
+        "OIS",
+        "LED flash",
+        "panorama",
+        "HDR"
+      ],
+      "rear_video": [
+        "4K",
+        "1080p",
+        "10-bit HDR",
+        "gyro-EIS"
+      ],
+      "front": "10.5 MP f/2.2",
+      "front_video": [
+        "4K",
+        "1080p"
+      ]
+    },
+    "battery": {
+      "type": "Li-Ion",
+      "capacity_mah": 5050,
+      "charging": {
+        "wired_w": 30,
+        "wireless_w": 23
+      }
+    },
+    "connectivity": {
+      "network": [
+        "GSM",
+        "CDMA",
+        "HSPA",
+        "EVDO",
+        "LTE",
+        "5G"
+      ],
+      "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7",
+      "bluetooth": "5.3",
+      "nfc": true,
+      "usb": "USB Type-C 3.2",
+      "infrared": false,
+      "radio": false,
+      "satellite": "n/a"
+    },
+    "sensors": [
+      "Fingerprint (under display, optical)",
+      "Accelerometer",
+      "Gyro",
+      "Proximity",
+      "Compass",
+      "Barometer"
+    ],
+    "sim": "Nano-SIM and eSIM",
+    "ip_rating": "IP68",
+    "build": "Aluminum frame, Gorilla Glass Victus 2 front/back",
+    "colors": [
+      "Obsidian",
+      "Porcelain",
+      "Bay"
+    ],
+    "price_eur": 1099,
+    "image_url": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro.jpg",
+    "created_at": "2023-10-12T10:00:00.000Z"
+  },
+  {
+    "brand": "OnePlus",
+    "model": "12",
+    "slug": "oneplus_12",
+    "release_date": "2024-01-23",
+    "dimensions": {
+      "height_mm": 164.3,
+      "width_mm": 75.8,
+      "depth_mm": 9.2,
+      "weight_g": 220
+    },
+    "display": {
+      "size_inches": 6.82,
+      "resolution": "1440x3168",
+      "ppi": 510,
+      "type": "LTPO AMOLED",
+      "refresh_rate_hz": 120,
+      "features": [
+        "HDR10+",
+        "4500 nits peak",
+        "Always-on display"
+      ],
+      "protection": "Corning Gorilla Glass Victus 2"
+    },
+    "platform": {
+      "os": [
+        "Android 14",
+        "OxygenOS 14"
+      ],
+      "chipset": "Snapdragon 8 Gen 3",
+      "cpu": "Octa-core",
+      "gpu": "Adreno 750"
+    },
+    "memory": {
+      "card_slot": false,
+      "ram_gb": 12,
+      "storage_gb": [
+        256,
+        512,
+        1024
+      ]
+    },
+    "camera": {
+      "rear": [
+        "50 MP wide",
+        "64 MP periscope telephoto",
+        "48 MP ultrawide"
+      ],
+      "rear_features": [
+        "PDAF",
+        "Laser AF",
+        "OIS",
+        "LED flash",
+        "panorama",
+        "HDR"
+      ],
+      "rear_video": [
+        "8K",
+        "4K",
+        "1080p",
+        "gyro-EIS"
+      ],
+      "front": "32 MP f/2.4",
+      "front_video": [
+        "4K",
+        "1080p"
+      ]
+    },
+    "battery": {
+      "type": "Li-Po",
+      "capacity_mah": 5400,
+      "charging": {
+        "wired_w": 100,
+        "wireless_w": 50
+      }
+    },
+    "connectivity": {
+      "network": [
+        "GSM",
+        "CDMA",
+        "HSPA",
+        "LTE",
+        "5G"
+      ],
+      "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7",
+      "bluetooth": "5.4",
+      "nfc": true,
+      "usb": "USB Type-C 3.2",
+      "infrared": false,
+      "radio": false,
+      "satellite": "n/a"
+    },
+    "sensors": [
+      "Fingerprint (under display, optical)",
+      "Accelerometer",
+      "Gyro",
+      "Proximity",
+      "Compass",
+      "Barometer"
+    ],
+    "sim": "Nano-SIM and eSIM",
+    "ip_rating": "IP65",
+    "build": "Aluminum frame, Gorilla Glass Victus 2 front/back",
+    "colors": [
+      "Flowy Emerald",
+      "Silky Black"
+    ],
+    "price_eur": 999,
+    "image_url": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-12.jpg",
+    "created_at": "2024-01-23T10:00:00.000Z"
+  },
+  {
+    "brand": "Sony",
+    "model": "Xperia 5 V",
+    "slug": "sony_xperia_5_v",
+    "release_date": "2023-09-15",
+    "dimensions": {
+      "height_mm": 154,
+      "width_mm": 68,
+      "depth_mm": 8.6,
+      "weight_g": 182
+    },
+    "display": {
+      "size_inches": 6.1,
+      "resolution": "1080x2520",
+      "ppi": 449,
+      "type": "OLED",
+      "refresh_rate_hz": 120,
+      "features": [
+        "HDR BT.2020",
+        "Corning Gorilla Glass Victus 2"
+      ],
+      "protection": "Corning Gorilla Glass Victus 2"
+    },
+    "platform": {
+      "os": ["Android 13"],
+      "chipset": "Snapdragon 8 Gen 2",
+      "cpu": "Octa-core",
+      "gpu": "Adreno 740"
+    },
+    "memory": {
+      "card_slot": true,
+      "ram_gb": 8,
+      "storage_gb": [128, 256]
+    },
+    "camera": {
+      "rear": [
+        "48 MP wide",
+        "12 MP telephoto",
+        "12 MP ultrawide"
+      ],
+      "rear_features": [
+        "Zeiss optics",
+        "LED flash",
+        "panorama",
+        "HDR"
+      ],
+      "rear_video": [
+        "4K",
+        "1080p",
+        "HDR",
+        "gyro-EIS"
+      ],
+      "front": "12 MP f/2.0",
+      "front_video": [
+        "4K",
+        "1080p",
+        "HDR"
+      ]
+    },
+    "battery": {
+      "type": "Li-Po",
+      "capacity_mah": 5000,
+      "charging": {
+        "wired_w": 30,
+        "wireless_w": 18
+      }
+    },
+    "connectivity": {
+      "network": ["GSM", "HSPA", "LTE", "5G"],
+      "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e",
+      "bluetooth": "5.3",
+      "nfc": true,
+      "usb": "USB Type-C 3.2",
+      "infrared": false,
+      "radio": false,
+      "satellite": "n/a"
+    },
+    "sensors": [
+      "Fingerprint (side-mounted)",
+      "Accelerometer",
+      "Gyro",
+      "Proximity",
+      "Compass",
+      "Barometer"
+    ],
+    "sim": "Nano-SIM and eSIM",
+    "ip_rating": "IP65/IP68",
+    "build": "Aluminum frame, Gorilla Glass Victus 2 front/back",
+    "colors": ["Black", "Blue", "Platinum Silver"],
+    "price_eur": 999,
+    "image_url": "https://fdn2.gsmarena.com/vv/pics/sony/sony-xperia-5-v.jpg",
+    "created_at": "2023-09-15T10:00:00.000Z"
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "13 Pro",
+    "slug": "xiaomi_13_pro",
+    "release_date": "2023-02-14",
+    "dimensions": { "height_mm": 162.9, "width_mm": 74.6, "depth_mm": 8.4, "weight_g": 210 },
+    "display": { "size_inches": 6.73, "resolution": "1440x3200", "ppi": 522, "type": "LTPO AMOLED", "refresh_rate_hz": 120, "features": ["HDR10+", "Dolby Vision"], "protection": "Corning Gorilla Glass Victus" },
+    "platform": { "os": ["Android 13", "MIUI 14"], "chipset": "Snapdragon 8 Gen 2", "cpu": "Octa-core", "gpu": "Adreno 740" },
+    "memory": { "card_slot": false, "ram_gb": 12, "storage_gb": [256, 512] },
+    "camera": { "rear": ["50 MP wide", "50 MP telephoto", "50 MP ultrawide"], "rear_features": ["Leica optics", "Dual-LED flash", "HDR"], "rear_video": ["8K", "4K", "1080p"], "front": "32 MP", "front_video": ["1080p"] },
+    "battery": { "type": "Li-Po", "capacity_mah": 4820, "charging": { "wired_w": 120, "wireless_w": 50 } },
+    "connectivity": { "network": ["GSM", "CDMA", "HSPA", "LTE", "5G"], "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7", "bluetooth": "5.3", "nfc": true, "usb": "USB Type-C 2.0", "infrared": true, "radio": false, "satellite": "n/a" },
+    "sensors": ["Fingerprint (under display, optical)", "Accelerometer", "Gyro", "Proximity", "Compass", "Barometer"],
+    "sim": "Nano-SIM and eSIM",
+    "ip_rating": "IP68",
+    "build": "Ceramic back, aluminum frame",
+    "colors": ["Ceramic White", "Ceramic Black", "Flora Green"],
+    "price_eur": 1199,
+    "image_url": "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-13-pro.jpg",
+    "created_at": "2023-02-14T10:00:00.000Z"
+  },
+  {
+    "brand": "Asus",
+    "model": "Zenfone 10",
+    "slug": "asus_zenfone_10",
+    "release_date": "2023-07-08",
+    "dimensions": { "height_mm": 146.5, "width_mm": 68.1, "depth_mm": 9.4, "weight_g": 172 },
+    "display": { "size_inches": 5.92, "resolution": "1080x2400", "ppi": 445, "type": "AMOLED", "refresh_rate_hz": 144, "features": ["HDR10+"], "protection": "Corning Gorilla Glass Victus" },
+    "platform": { "os": ["Android 13"], "chipset": "Snapdragon 8 Gen 2", "cpu": "Octa-core", "gpu": "Adreno 740" },
+    "memory": { "card_slot": false, "ram_gb": 8, "storage_gb": [128, 256] },
+    "camera": { "rear": ["50 MP wide", "13 MP ultrawide"], "rear_features": ["gimbal OIS", "LED flash", "HDR"], "rear_video": ["8K", "4K", "1080p"], "front": "32 MP", "front_video": ["1080p"] },
+    "battery": { "type": "Li-Po", "capacity_mah": 4300, "charging": { "wired_w": 30, "wireless_w": 15 } },
+    "connectivity": { "network": ["GSM", "HSPA", "LTE", "5G"], "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7", "bluetooth": "5.3", "nfc": true, "usb": "USB Type-C 2.0", "infrared": false, "radio": false, "satellite": "n/a" },
+    "sensors": ["Fingerprint (side-mounted)", "Accelerometer", "Gyro", "Proximity", "Compass", "Barometer"],
+    "sim": "Nano-SIM and eSIM",
+    "ip_rating": "IP68",
+    "build": "Plastic back, aluminum frame",
+    "colors": ["Starry Blue", "Aurora Green", "Eclipse Red", "Comet White", "Midnight Black"],
+    "price_eur": 799,
+    "image_url": "https://fdn2.gsmarena.com/vv/pics/asus/asus-zenfone-10.jpg",
+    "created_at": "2023-07-08T10:00:00.000Z"
+  },
+  {
+    "brand": "Motorola",
+    "model": "Edge 40 Pro",
+    "slug": "motorola_edge_40_pro",
+    "release_date": "2023-04-04",
+    "dimensions": { "height_mm": 161.2, "width_mm": 74, "depth_mm": 8.6, "weight_g": 199 },
+    "display": { "size_inches": 6.67, "resolution": "1080x2400", "ppi": 395, "type": "OLED", "refresh_rate_hz": 165, "features": ["HDR10+"], "protection": "Corning Gorilla Glass Victus" },
+    "platform": { "os": ["Android 13"], "chipset": "Snapdragon 8 Gen 2", "cpu": "Octa-core", "gpu": "Adreno 740" },
+    "memory": { "card_slot": false, "ram_gb": 12, "storage_gb": [256, 512] },
+    "camera": { "rear": ["50 MP wide", "12 MP telephoto", "50 MP ultrawide"], "rear_features": ["OIS", "LED flash", "HDR"], "rear_video": ["8K", "4K", "1080p"], "front": "60 MP", "front_video": ["4K", "1080p"] },
+    "battery": { "type": "Li-Po", "capacity_mah": 4600, "charging": { "wired_w": 125, "wireless_w": 15 } },
+    "connectivity": { "network": ["GSM", "CDMA", "HSPA", "LTE", "5G"], "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7", "bluetooth": "5.3", "nfc": true, "usb": "USB Type-C 3.2", "infrared": false, "radio": false, "satellite": "n/a" },
+    "sensors": ["Fingerprint (under display, optical)", "Accelerometer", "Gyro", "Proximity", "Compass", "Barometer"],
+    "sim": "Nano-SIM and eSIM",
+    "ip_rating": "IP68",
+    "build": "Glass back, aluminum frame",
+    "colors": ["Interstellar Black", "Lunar Blue"],
+    "price_eur": 899,
+    "image_url": "https://fdn2.gsmarena.com/vv/pics/motorola/motorola-edge-40-pro.jpg",
+    "created_at": "2023-04-04T10:00:00.000Z"
+  },
+  {
+    "brand": "Realme",
+    "model": "GT 3",
+    "slug": "realme_gt_3",
+    "release_date": "2023-03-14",
+    "dimensions": { "height_mm": 163.9, "width_mm": 75.8, "depth_mm": 8.9, "weight_g": 199 },
+    "display": { "size_inches": 6.74, "resolution": "1240x2772", "ppi": 451, "type": "AMOLED", "refresh_rate_hz": 144, "features": ["HDR10+"], "protection": "Asahi Glass" },
+    "platform": { "os": ["Android 13", "Realme UI 4.0"], "chipset": "Snapdragon 8+ Gen 1", "cpu": "Octa-core", "gpu": "Adreno 730" },
+    "memory": { "card_slot": false, "ram_gb": 8, "storage_gb": [128, 256, 512] },
+    "camera": { "rear": ["50 MP wide", "8 MP ultrawide", "2 MP microscope"], "rear_features": ["OIS", "LED flash", "HDR"], "rear_video": ["4K", "1080p"], "front": "16 MP", "front_video": ["1080p"] },
+    "battery": { "type": "Li-Po", "capacity_mah": 4600, "charging": { "wired_w": 240 } },
+    "connectivity": { "network": ["GSM", "CDMA", "HSPA", "LTE", "5G"], "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6/7", "bluetooth": "5.3", "nfc": true, "usb": "USB Type-C 2.0", "infrared": false, "radio": false, "satellite": "n/a" },
+    "sensors": ["Fingerprint (under display, optical)", "Accelerometer", "Gyro", "Proximity", "Compass"],
+    "sim": "Nano-SIM and eSIM",
+    "ip_rating": "n/a",
+    "build": "Plastic back, aluminum frame",
+    "colors": ["Booster Black", "Pulse White", "Purple"],
+    "price_eur": 699,
+    "image_url": "https://fdn2.gsmarena.com/vv/pics/realme/realme-gt3.jpg",
+    "created_at": "2023-03-14T10:00:00.000Z"
+  },
+  {
+    "brand": "Oppo",
+    "model": "Find X6 Pro",
+    "slug": "oppo_find_x6_pro",
+    "release_date": "2023-03-24",
+    "dimensions": { "height_mm": 164.1, "width_mm": 76.2, "depth_mm": 9.1, "weight_g": 218 },
+    "display": { "size_inches": 6.82, "resolution": "1440x3168", "ppi": 510, "type": "LTPO3 AMOLED", "refresh_rate_hz": 120, "features": ["HDR10+", "Dolby Vision"], "protection": "Corning Gorilla Glass Victus 2" },
+    "platform": { "os": ["Android 13", "ColorOS 13.1"], "chipset": "Snapdragon 8 Gen 2", "cpu": "Octa-core", "gpu": "Adreno 740" },
+    "memory": { "card_slot": false, "ram_gb": 12, "storage_gb": [256, 512] },
+    "camera": { "rear": ["50 MP wide", "50 MP periscope telephoto", "50 MP ultrawide"], "rear_features": ["Hasselblad Color Calibration", "OIS", "LED flash", "HDR"], "rear_video": ["4K", "1080p"], "front": "32 MP", "front_video": ["4K", "1080p"] },
+    "battery": { "type": "Li-Po", "capacity_mah": 5000, "charging": { "wired_w": 100, "wireless_w": 50 } },
+    "connectivity": { "network": ["GSM", "CDMA", "HSPA", "LTE", "5G"], "wifi": "Wi-Fi 802.11 a/b/g/n/ac/6e/7", "bluetooth": "5.3", "nfc": true, "usb": "USB Type-C 3.1", "infrared": false, "radio": false, "satellite": "n/a" },
+    "sensors": ["Fingerprint (under display, optical)", "Accelerometer", "Gyro", "Proximity", "Compass", "Barometer"],
+    "sim": "Nano-SIM and eSIM",
+    "ip_rating": "IP68",
+    "build": "Glass back, aluminum frame",
+    "colors": ["Black", "Green", "Brown"],
+    "price_eur": 1299,
+    "image_url": "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x6-pro.jpg",
+    "created_at": "2023-03-24T10:00:00.000Z"
+  }
+]

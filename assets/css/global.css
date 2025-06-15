@@ -1,0 +1,326 @@
+/* === CSS RESET & BASE === */
+:root {
+  /* Dark theme (default) */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2a2a2a;
+  --bg-tertiary: #181818;
+  --text-primary: #fff;
+  --text-secondary: #ccc;
+  --text-tertiary: #aaa;
+  --border-color: #333;
+  --accent-color: #4a9eff;
+  --hover-bg: #3a3a3a;
+  --card-bg: #2a2a2a;
+  --input-bg: rgba(80, 80, 80, 0.92);
+  --section-bg: #232a36;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+.light-theme {
+  --bg-primary: #fff;
+  --bg-secondary: #fff;
+  --bg-tertiary: #f5f5f5;
+  --text-primary: #222;
+  --text-secondary: #444;
+  --text-tertiary: #888;
+  --border-color: #e0e0e0;
+  --accent-color: #0066cc;
+  --hover-bg: #e5e5e5;
+  --card-bg: #f5f5f5;
+  --input-bg: #f5f5f5;
+  --section-bg: #f5f5f5;
+  --shadow-color: rgba(0, 0, 0, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* === TYPOGRAPHY === */
+h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); }
+h2 { font-size: clamp(1.25rem, 4vw, 2rem); }
+h3 { font-size: clamp(1.1rem, 3vw, 1.75rem); }
+p { font-size: clamp(1rem, 2vw, 1.1rem); }
+
+/* === LAYOUT & CONTAINERS === */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+.nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.nav a:hover {
+  background: var(--hover-bg);
+}
+
+/* === SEARCH BAR === */
+.search-bar {
+  position: relative;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 600px;
+}
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+}
+.search-input::placeholder {
+  color: #888;
+}
+
+/* === PHONE SHAPE & INFO === */
+.phone-container {
+  position: relative;
+  margin: 0 2rem;
+}
+.phone-info {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+.phone-name {
+  font-weight: bold;
+  color: white;
+}
+.phone-specs {
+  color: #ccc;
+  font-size: 0.8rem;
+}
+.phone-svg {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+.phone-front {
+  fill: #2a2a2a;
+  stroke: #4a9eff;
+  stroke-width: 2;
+}
+.phone-back {
+  fill: #1a1a1a;
+  stroke: #666;
+  stroke-width: 1;
+  opacity: 0.7;
+}
+.screen {
+  fill: #000;
+  stroke: #333;
+  stroke-width: 1;
+}
+.camera-module {
+  fill: #333;
+  stroke: #555;
+  stroke-width: 1;
+}
+.camera-lens {
+  fill: #111;
+  stroke: #444;
+  stroke-width: 1;
+}
+.dimension-line {
+  stroke: #4a9eff;
+  stroke-width: 1;
+  stroke-dasharray: 2,2;
+}
+.dimension-text {
+  fill: #4a9eff;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+/* === CONTROLS (LEGACY/UNUSED) === */
+.controls {
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+.control-group {
+  margin-bottom: 1rem;
+}
+.control-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.toggle-btn {
+  background: #3a3a3a;
+  border: 1px solid #555;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.toggle-btn.active {
+  background: #4a9eff;
+  border-color: #4a9eff;
+}
+
+/* === PHONE GRID (LEGACY/UNUSED) === */
+.phone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.phone-card {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.phone-card:hover {
+  border-color: #4a9eff;
+  transform: translateY(-2px);
+}
+.phone-card.selected {
+  border-color: #4a9eff;
+  background: rgba(74, 158, 255, 0.1);
+}
+
+/* === GLOBAL SCROLLBAR === */
+html, body, * {
+  scrollbar-width: thin;
+  scrollbar-color: #4a9eff #232a36;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background: #232a36;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a9eff;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2176bd;
+}
+
+/* === RESPONSIVE IMAGES & MEDIA === */
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === TOUCH-FRIENDLY ELEMENTS === */
+button, 
+a, 
+input[type="button"],
+input[type="submit"] {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* === RESPONSIVE CONTAINERS === */
+@media (max-width: 600px) {
+  .desktop-only {
+    display: none;
+  }
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+@media (min-width: 901px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* === UTILITY CLASSES === */
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.grid {
+  display: grid;
+}
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 600px) {
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 1rem; }
+.gap-4 { gap: 1.5rem; }
+.gap-5 { gap: 2rem; } 
