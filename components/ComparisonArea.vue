@@ -4,49 +4,48 @@
       <div class="empty-message">Select a phone to compare</div>
     </template>
     <template v-else>
-      <div class="toolbar-row">
-        <button class="toggle-btn" :class="{ active: showDimensions }" @click="showDimensions = !showDimensions">
-          {{ showDimensions ? 'Hide' : 'Show' }} Dimensions
-        </button>
-        <button class="toggle-btn" :class="{ active: isStackedView }" @click="isStackedView = !isStackedView">
-          {{ isStackedView ? 'Side-by-Side View' : 'Stacked View' }}
-        </button>
-        <div class="size-slider-group">
-          <span class="size-label">Size</span>
-          <button class="slider-btn" @click="decreaseSize">-</button>
-          <input type="range" min="50" max="150" step="1" :value="sizePercent" @input="setSizePercent($event.target.value)" />
-          <button class="slider-btn" @click="increaseSize">+</button>
-          <span class="size-value">{{ sizePercent }}%</span>
+      <div class="toolbar-row" v-if="!isTableView">
+        <div class="toolbar-left">
+          <button class="toggle-btn" :class="{ active: showDimensions }" @click="showDimensions = !showDimensions">
+            {{ showDimensions ? 'Hide' : 'Show' }} Dimensions
+          </button>
+          <button class="toggle-btn" :class="{ active: isStackedView }" @click="isStackedView = !isStackedView">
+            {{ isStackedView ? 'Side-by-Side View' : 'Stacked View' }}
+          </button>
+          <div class="size-slider-group">
+            <span class="size-label">Size</span>
+            <button class="slider-btn" @click="decreaseSize">-</button>
+            <input type="range" min="0" max="200" step="1" :value="sizePercent" @input="setSizePercent($event.target.value)" />
+            <button class="slider-btn" @click="increaseSize">+</button>
+            <span class="size-value">{{ sizePercent }}%</span>
+          </div>
         </div>
       </div>
-      <div class="toolbar-spacer"></div>
-      <ComparisonNormal
-        v-if="!isStackedView"
+      <div class="toolbar-spacer" v-if="!isTableView"></div>
+      <ComparisonShapesView
+        v-if="!isTableView"
         :phoneData="phoneData"
         :selectedPhones="selectedPhones"
         :viewMode="viewMode"
         :scaleMode="scaleMode"
         :showDimensions="showDimensions"
         :colorMap="phoneColorMap"
-      />
-      <ComparisonStacked
-        v-else
-        :phoneData="phoneData"
-        :selectedPhones="selectedPhones"
-        :colorMap="phoneColorMap"
+        :isStackedView="isStackedView"
         :sizePercent="sizePercent"
-        :showDimensions="showDimensions"
       />
-      <PhoneStatsTable />
+      <PhoneStatsTable v-else />
     </template>
   </div>
 </template>
 
 <script setup>
 import { inject, reactive, watch, ref } from 'vue'
-import ComparisonNormal from './ComparisonNormal.vue'
-import ComparisonStacked from './ComparisonStacked.vue'
+import ComparisonShapesView from './ComparisonShapesView.vue'
 import PhoneStatsTable from './PhoneStatsTable.vue'
+
+const props = defineProps({
+  isTableView: Boolean
+})
 
 const phoneData = inject('phoneData')
 const selectedPhones = inject('selectedPhones')
@@ -97,8 +96,32 @@ watch(selectedPhones, assignColors, { immediate: true, deep: true })
 .toolbar-row {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 900px;
+}
+.toolbar-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.toolbar-right {
+  display: flex;
+  align-items: center;
+}
+.view-toggle {
+  font-weight: 600;
+  background: #232a36;
+  color: #4a9eff;
+  border: 1px solid #4a9eff;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  transition: background 0.18s, color 0.18s;
+}
+.view-toggle:hover {
+  background: #4a9eff;
+  color: #232a36;
 }
 .size-slider-group {
   display: flex;

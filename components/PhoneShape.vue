@@ -107,7 +107,7 @@ const selectedPhones = inject('selectedPhones')
 const sizePercent = inject('sizePercent')
 
 const baseScale = computed(() => props.scale === 'actual' ? 2 : 1.5)
-const scale = computed(() => baseScale.value * (sizePercent ? sizePercent.value / 100 : 1))
+const scale = computed(() => baseScale.value * (sizePercent ? sizePercent.value / 100 : 0))
 const phoneWidth = computed(() => props.phone.dimensions.width_mm * scale.value)
 const phoneHeight = computed(() => props.phone.dimensions.height_mm * scale.value)
 const phoneDepth = computed(() => props.phone.dimensions.depth_mm * scale.value)

@@ -93,7 +93,7 @@ const props = defineProps({
 const selectedPhones = inject('selectedPhones')
 
 const baseScale = 1.5
-const scale = computed(() => baseScale * (props.sizePercent ? props.sizePercent / 100 : 1))
+const scale = computed(() => baseScale * (props.sizePercent ? props.sizePercent / 100 : 0))
 
 const outlineX = 48
 const outlineY = 8

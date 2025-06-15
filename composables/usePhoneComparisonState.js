@@ -28,7 +28,7 @@ export default function usePhoneComparisonState() {
   const sizePercent = ref(100)
   const isStacked = ref(false)
   function setSizePercent(val) {
-    sizePercent.value = Math.max(50, Math.min(150, val))
+    sizePercent.value = Math.max(0, Math.min(200, val))
   }
   function increaseSize() { setSizePercent(sizePercent.value + 5) }
   function decreaseSize() { setSizePercent(sizePercent.value - 5) }

@@ -17,7 +17,7 @@
             <label class="control-label">Size <span class="size-value">{{ sizePercent }}%</span></label>
             <div class="slider-row">
                 <button class="slider-btn" @click="decreaseSize">-</button>
-                <input type="range" min="50" max="150" step="1" v-model.number="sizePercent" @input="onSlider" />
+                <input type="range" min="0" max="200" step="1" v-model.number="sizePercent" @input="onSlider" />
                 <button class="slider-btn" @click="increaseSize">+</button>
             </div>
         </div>

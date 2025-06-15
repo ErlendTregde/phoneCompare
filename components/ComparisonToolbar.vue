@@ -6,7 +6,7 @@
     <div class="size-slider-group">
       <span class="size-label">Size</span>
       <button class="slider-btn" @click="$emit('decrease-size')">-</button>
-      <input type="range" min="50" max="150" step="1" :value="sizePercent" @input="$emit('set-size', $event.target.value)" />
+      <input type="range" min="0" max="200" step="1" :value="sizePercent" @input="$emit('set-size', $event.target.value)" />
       <button class="slider-btn" @click="$emit('increase-size')">+</button>
       <span class="size-value">{{ sizePercent }}%</span>
     </div>

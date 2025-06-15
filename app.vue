@@ -1,12 +1,18 @@
 <template>
   <NuxtLayout>
-    <SearchBar />
-    <ComparisonArea />
+    <SearchBar>
+      <template #after-input>
+        <button class="toggle-btn view-toggle" @click="isTableView = !isTableView">
+          {{ isTableView ? 'Show Shapes' : 'Show Table' }}
+        </button>
+      </template>
+    </SearchBar>
+    <ComparisonArea :isTableView="isTableView" />
   </NuxtLayout>
 </template>
 
 <script setup>
-import { provide } from 'vue'
+import { provide, ref } from 'vue'
 import SearchBar from '@/components/SearchBar.vue'
 import ComparisonArea from '@/components/ComparisonArea.vue'
 import usePhoneComparisonState from '@/composables/usePhoneComparisonState'
@@ -25,6 +31,8 @@ const {
 } = usePhoneComparisonState()
 
 const { isDark } = useTheme()
+
+const isTableView = ref(false)
 
 provide('phoneData', phoneData)
 provide('selectedPhones', selectedPhones)

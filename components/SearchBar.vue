@@ -1,14 +1,19 @@
 <template>
     <div class="search-bar">
-        <input type="text" class="search-input" placeholder="Add phone to comparison" v-model="searchQuery"
-            @focus="showDropdown = true"
-            @input="onInput"
-            @keydown.esc="showDropdown = false"
-            @keydown.down.prevent="moveFocus(1)"
-            @keydown.up.prevent="moveFocus(-1)"
-            @keydown.enter.prevent="selectFocused()"
-            @blur="onBlur"
-            autocomplete="off" />
+        <div class="search-row">
+            <input type="text" class="search-input" placeholder="Add phone to comparison" v-model="searchQuery"
+                @focus="showDropdown = true"
+                @input="onInput"
+                @keydown.esc="showDropdown = false"
+                @keydown.down.prevent="moveFocus(1)"
+                @keydown.up.prevent="moveFocus(-1)"
+                @keydown.enter.prevent="selectFocused()"
+                @blur="onBlur"
+                autocomplete="off" />
+            <div class="searchbar-slot">
+                <slot name="after-input"></slot>
+            </div>
+        </div>
         <div v-if="showDropdown" class="dropdown">
             <div
                 v-for="([id, phone], idx) in filteredPhones"
@@ -102,9 +107,15 @@ function selectFocused() {
     width: 90%;
     max-width: 600px;
 }
-
-.search-input {
+.search-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
+    gap: 1rem;
+}
+.search-input {
+    flex: 1 1 0;
     padding: 1rem;
     background: var(--input-bg);
     border: 1px solid var(--border-color);
@@ -112,6 +123,12 @@ function selectFocused() {
     color: var(--text-primary);
     font-size: 1rem;
     transition: background 0.2s, color 0.2s;
+}
+.searchbar-slot {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 120px;
 }
 
 .search-input::placeholder {
