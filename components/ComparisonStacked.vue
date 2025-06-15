@@ -17,49 +17,49 @@
             stroke-width="3"
             opacity="0.85"
           />
-          <!-- Only show dimensions for the first phone -->
-          <g v-if="phoneData[id] && showDimensions && id === selectedPhones[0]">
-            <line
-              :x1="outlineX + getWidth(phoneData[id]) + 10"
-              :y1="outlineY"
-              :x2="outlineX + getWidth(phoneData[id]) + 10"
-              :y2="outlineY + getHeight(phoneData[id])"
-              stroke="#4a9eff"
-              stroke-width="1"
-              stroke-dasharray="2,2"
-            />
-            <text
-              :x="outlineX + getWidth(phoneData[id]) + 14"
-              :y="outlineY + getHeight(phoneData[id]) / 2"
-              fill="#4a9eff"
-              font-size="12"
-              text-anchor="start"
-              alignment-baseline="middle"
-              font-family="monospace"
-            >
-              {{ phoneData[id].dimensions.height_mm }}mm
-            </text>
-            <line
-              :x1="outlineX"
-              :y1="outlineY + getHeight(phoneData[id]) + 18"
-              :x2="outlineX + getWidth(phoneData[id])"
-              :y2="outlineY + getHeight(phoneData[id]) + 18"
-              stroke="#4a9eff"
-              stroke-width="1"
-              stroke-dasharray="2,2"
-            />
-            <text
-              :x="outlineX + getWidth(phoneData[id]) / 2"
-              :y="outlineY + getHeight(phoneData[id]) + 32"
-              fill="#4a9eff"
-              font-size="12"
-              text-anchor="middle"
-              alignment-baseline="middle"
-              font-family="monospace"
-            >
-              {{ phoneData[id].dimensions.width_mm }}mm
-            </text>
-          </g>
+        </g>
+        <!-- Only show dimensions for the largest phone -->
+        <g v-if="showDimensions && largestPhoneId && phoneData[largestPhoneId]">
+          <line
+            :x1="outlineX + getWidth(phoneData[largestPhoneId]) + 10"
+            :y1="outlineY"
+            :x2="outlineX + getWidth(phoneData[largestPhoneId]) + 10"
+            :y2="outlineY + getHeight(phoneData[largestPhoneId])"
+            stroke="#4a9eff"
+            stroke-width="1"
+            stroke-dasharray="2,2"
+          />
+          <text
+            :x="outlineX + getWidth(phoneData[largestPhoneId]) + 14"
+            :y="outlineY + getHeight(phoneData[largestPhoneId]) / 2"
+            fill="#4a9eff"
+            font-size="12"
+            text-anchor="start"
+            alignment-baseline="middle"
+            font-family="monospace"
+          >
+            {{ phoneData[largestPhoneId].dimensions.height_mm }}mm
+          </text>
+          <line
+            :x1="outlineX"
+            :y1="outlineY + getHeight(phoneData[largestPhoneId]) + 18"
+            :x2="outlineX + getWidth(phoneData[largestPhoneId])"
+            :y2="outlineY + getHeight(phoneData[largestPhoneId]) + 18"
+            stroke="#4a9eff"
+            stroke-width="1"
+            stroke-dasharray="2,2"
+          />
+          <text
+            :x="outlineX + getWidth(phoneData[largestPhoneId]) / 2"
+            :y="outlineY + getHeight(phoneData[largestPhoneId]) + 32"
+            fill="#4a9eff"
+            font-size="12"
+            text-anchor="middle"
+            alignment-baseline="middle"
+            font-family="monospace"
+          >
+            {{ phoneData[largestPhoneId].dimensions.width_mm }}mm
+          </text>
         </g>
       </svg>
     </div>
@@ -109,6 +109,23 @@ function getHeight(phone) {
 function getCornerRadius(phone) {
   return Math.min(getWidth(phone), getHeight(phone)) * 0.15
 }
+
+// Find the phone with the largest width and height
+const largestPhoneId = computed(() => {
+  let maxArea = 0
+  let maxId = null
+  for (const id of props.selectedPhones) {
+    const phone = props.phoneData[id]
+    if (phone) {
+      const area = getWidth(phone) * getHeight(phone)
+      if (area > maxArea) {
+        maxArea = area
+        maxId = id
+      }
+    }
+  }
+  return maxId
+})
 
 const svgWidth = computed(() => {
   const maxWidth = Math.max(...props.selectedPhones.map(id => 

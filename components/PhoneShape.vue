@@ -6,10 +6,6 @@
       <g v-if="view === 'side'" :transform="'translate(0, 0)'">
         <!-- Phone side outline -->
         <rect class="phone-outline" :x="sideX" :y="sideY" :width="phoneDepth" :height="phoneHeight" :rx="cornerRadius" :ry="cornerRadius" />
-        <!-- Volume and power buttons -->
-        <rect class="button" :x="sideX + phoneDepth - 3" :y="sideY + phoneHeight * 0.3" width="4" height="20" rx="2" ry="2" fill="#333"/>
-        <rect class="button" :x="sideX + phoneDepth - 3" :y="sideY + phoneHeight * 0.5" width="4" height="20" rx="2" ry="2" fill="#333"/>
-        <rect class="button" :x="sideX + phoneDepth - 3" :y="sideY + phoneHeight * 0.7" width="4" height="30" rx="2" ry="2" fill="#333"/>
         <g v-if="showDimensions">
           <!-- Height dimension -->
           <line class="dimension-line" :x1="sideX + phoneDepth + 10" :y1="sideY" :x2="sideX + phoneDepth + 10" :y2="sideY + phoneHeight" />
@@ -26,7 +22,7 @@
       <!-- Front view -->
       <g v-if="view === 'front'" :transform="'translate(0, 0)'">
         <rect class="phone-outline" :x="frontX" :y="frontY" :width="phoneWidth" :height="phoneHeight" :rx="cornerRadius" :ry="cornerRadius" />
-        <rect class="screen" :x="frontX + 4" :y="frontY + 7" :width="screenWidth" :height="screenHeight" :rx="screenCornerRadius" :ry="screenCornerRadius"/>
+        <rect class="screen" :x="frontX + 4" :y="frontY + 7" :width="screenWidth" :height="screenHeight" :rx="screenCornerRadius" :ry="screenCornerRadius" fill="none"/>
         <g v-if="showDimensions">
           <!-- Height dimension -->
           <line class="dimension-line" :x1="frontX + phoneWidth + 10" :y1="frontY" :x2="frontX + phoneWidth + 10" :y2="frontY + phoneHeight" />
@@ -45,9 +41,6 @@
         <!-- Side view on left -->
         <g :transform="'translate(0, 0)'">
           <rect class="phone-outline" :x="sideX" :y="sideY" :width="phoneDepth" :height="phoneHeight" :rx="cornerRadius" :ry="cornerRadius" />
-          <rect class="button" :x="sideX + phoneDepth - 3" :y="sideY + phoneHeight * 0.3" width="4" height="20" rx="2" ry="2" fill="#333"/>
-          <rect class="button" :x="sideX + phoneDepth - 3" :y="sideY + phoneHeight * 0.5" width="4" height="20" rx="2" ry="2" fill="#333"/>
-          <rect class="button" :x="sideX + phoneDepth - 3" :y="sideY + phoneHeight * 0.7" width="4" height="30" rx="2" ry="2" fill="#333"/>
           <g v-if="showDimensions">
             <!-- Height dimension for side -->
             <line class="dimension-line" :x1="sideX + phoneDepth + 10" :y1="sideY" :x2="sideX + phoneDepth + 10" :y2="sideY + phoneHeight" />
@@ -64,7 +57,7 @@
         <!-- Front view on right, spaced apart -->
         <g :transform="`translate(${sideX + phoneDepth + 40}, 0)`">
           <rect class="phone-outline" :x="frontX" :y="frontY" :width="phoneWidth" :height="phoneHeight" :rx="cornerRadius" :ry="cornerRadius" />
-          <rect class="screen" :x="frontX + 4" :y="frontY + 7" :width="screenWidth" :height="screenHeight" :rx="screenCornerRadius" :ry="screenCornerRadius"/>
+          <rect class="screen" :x="frontX + 4" :y="frontY + 7" :width="screenWidth" :height="screenHeight" :rx="screenCornerRadius" :ry="screenCornerRadius" fill="none"/>
           <g v-if="showDimensions">
             <!-- Height dimension for front -->
             <line class="dimension-line" :x1="frontX + phoneWidth + 10" :y1="frontY" :x2="frontX + phoneWidth + 10" :y2="frontY + phoneHeight" />
@@ -207,13 +200,13 @@ function removePhone() {
 }
 
 .screen {
-  fill: #000;
+  fill: none;
   stroke: rgba(255, 255, 255, 0.1);
   stroke-width: 1;
 }
 
 .button {
-  stroke: rgba(0, 0, 0, 0.2);
+  stroke: none;
   stroke-width: 1;
 }
 
