@@ -1,4 +1,4 @@
-import { ref, reactive, watch } from 'vue'
+import { ref, reactive, watch, onMounted } from 'vue'
 import phones from '@/public/data/phones.json'
 
 export default function usePhoneComparisonState() {
@@ -8,19 +8,25 @@ export default function usePhoneComparisonState() {
     return acc;
   }, {})
   const defaultPhones = ['samsung_galaxy_s24_ultra']
-  const saved = typeof window !== 'undefined' ? localStorage.getItem('selectedPhones') : null
-  const selectedPhones = reactive(saved ? JSON.parse(saved) : defaultPhones)
+  // Always use default on SSR
+  const selectedPhones = reactive([...defaultPhones])
 
-  watch(selectedPhones, (val) => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('selectedPhones', JSON.stringify([...val]))
+  // On client, update from localStorage after hydration
+  onMounted(() => {
+    const saved = localStorage.getItem('selectedPhones')
+    if (saved) {
+      selectedPhones.splice(0, selectedPhones.length, ...JSON.parse(saved))
     }
-  }, { deep: true })
+    watch(selectedPhones, (val) => {
+      localStorage.setItem('selectedPhones', JSON.stringify([...val]))
+    }, { deep: true })
+  })
 
   const viewMode = ref('both')
   const scaleMode = ref('fit')
   const showDimensions = ref(true)
   const sizePercent = ref(100)
+  const isStacked = ref(false)
   function setSizePercent(val) {
     sizePercent.value = Math.max(50, Math.min(150, val))
   }
@@ -36,6 +42,7 @@ export default function usePhoneComparisonState() {
     sizePercent,
     setSizePercent,
     increaseSize,
-    decreaseSize
+    decreaseSize,
+    isStacked
   }
 } 

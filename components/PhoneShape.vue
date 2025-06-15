@@ -1,15 +1,6 @@
 <template>
   <div class="phone-container">
-    <div class="phone-info">
-      <div class="phone-name">
-        <span class="color-indicator" :style="{ backgroundColor: color }"></span>
-        {{ phone.brand }} {{ phone.model }} 
-        <span class="remove-x" @click="removePhone" title="Remove">×</span>
-      </div>
-      <div class="phone-specs">
-        {{ phone.dimensions.height_mm }} × {{ phone.dimensions.width_mm }} × {{ phone.dimensions.depth_mm }} mm • {{ phone.dimensions.weight_g }}g
-      </div>
-    </div>
+    <PhoneInfoCard class="phone-info-card-outer" :phone="phone" :color="color" :onRemove="removePhone" />
     <svg class="phone-svg" :width="svgWidth" :height="svgHeight" :viewBox="`0 0 ${svgWidth} ${svgHeight}`" :style="{ color: color }" :class="colorClass">
       <!-- Side view -->
       <g v-if="view === 'side'" :transform="'translate(0, 0)'">
@@ -94,6 +85,7 @@
 
 <script setup>
 import { computed, inject } from 'vue'
+import PhoneInfoCard from './PhoneInfoCard.vue'
 
 const props = defineProps({
   phone: {
