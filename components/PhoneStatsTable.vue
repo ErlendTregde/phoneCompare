@@ -60,6 +60,7 @@ const rows = computed(() => [
   font-family: inherit;
   padding: 0.5rem 0.5rem 1.5rem 0.5rem;
   border: 1px solid var(--border-color);
+  width: 100%;
 }
 .phone-stats-table {
   width: 100%;
@@ -160,6 +161,20 @@ const rows = computed(() => [
   margin-right: 0.7em;
   font-size: 1.2em;
 }
+@media (max-width: 900px) {
+  .phone-stats-table-wrapper {
+    max-width: 100vw;
+    width: 100vw;
+    border-radius: 0;
+    margin: 1rem 0 0 0;
+    padding: 0.2rem 0 1rem 0;
+    overflow-x: auto;
+  }
+  .phone-stats-table {
+    min-width: 480px;
+    width: max-content;
+  }
+}
 @media (max-width: 700px) {
   .phone-stats-table th, .phone-stats-table td {
     padding: 0.5em 0.3em;
@@ -167,6 +182,8 @@ const rows = computed(() => [
   }
   .phone-stats-table-wrapper {
     padding: 0.2rem 0.1rem 1rem 0.1rem;
+    max-width: 100vw;
+    width: 100vw;
   }
   .where-to-buy-row {
     flex-direction: column;

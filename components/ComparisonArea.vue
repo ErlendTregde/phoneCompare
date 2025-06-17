@@ -96,7 +96,7 @@ watch(selectedPhones, assignColors, { immediate: true, deep: true })
 .toolbar-row {
   display: flex;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 900px;
@@ -105,6 +105,8 @@ watch(selectedPhones, assignColors, { immediate: true, deep: true })
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .toolbar-right {
   display: flex;
@@ -175,6 +177,17 @@ input[type="range"] {
   height: 80px;
 }
 @media (max-width: 700px) {
+  .toolbar-row {
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 100vw;
+    width: 100%;
+  }
+  .toolbar-left {
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+  }
   .toolbar-spacer {
     height: 110px;
   }

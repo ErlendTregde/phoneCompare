@@ -1,8 +1,8 @@
 <template>
   <header class="header" ref="headerRef">
     <div class="logo">📱 Dimensio Compare</div>
-    <div class="nav-container">
-      <nav class="nav" :class="{ 'active': isMenuOpen }">
+    <div :class="['nav-container', { active: isMenuOpen }]">
+      <nav class="nav">
         <NuxtLink to="/">Compare</NuxtLink>
         <NuxtLink to="/database">Database</NuxtLink>
         <NuxtLink to="/reviews">Reviews</NuxtLink>
@@ -120,7 +120,6 @@ onUnmounted(() => {
   .hamburger {
     display: block;
   }
-  
   .nav-container {
     display: none;
     position: absolute;
@@ -131,17 +130,15 @@ onUnmounted(() => {
     padding: 1rem;
     flex-direction: column;
     align-items: stretch;
+    z-index: 200;
   }
-  
   .nav-container.active {
     display: flex;
   }
-  
   .nav {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
   .theme-toggle {
     align-self: center;
     margin-top: 1rem;
