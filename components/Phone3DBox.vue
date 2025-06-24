@@ -16,6 +16,19 @@ const props = defineProps({
   label: { type: String, default: '' }
 })
 
+function resolveCssVar(color) {
+  if (!color) return '#4a9eff';
+  if (color.startsWith('var(')) {
+    const varName = color.match(/var\((--[^)]+)\)/)?.[1];
+    if (varName && typeof window !== 'undefined') {
+      const value = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+      return value || '#4a9eff';
+    }
+    return '#4a9eff';
+  }
+  return color;
+}
+
 const canvasRef = ref(null)
 let renderer, scene, camera, box, animationId
 let isDragging = false
@@ -30,7 +43,7 @@ function setupScene() {
   scene.add(camera)
 
   const geometry = new THREE.BoxGeometry(props.width * scale, props.height * scale, props.depth * scale)
-  const material = new THREE.MeshPhongMaterial({ color: props.color, wireframe: false })
+  const material = new THREE.MeshPhongMaterial({ color: resolveCssVar(props.color), wireframe: false })
   box = new THREE.Mesh(geometry, material)
   scene.add(box)
 
@@ -98,7 +111,7 @@ watch(() => [props.width, props.height, props.depth, props.color], () => {
   // For extensibility: re-create box if props change
   if (box) scene.remove(box)
   const geometry = new THREE.BoxGeometry(props.width * scale, props.height * scale, props.depth * scale)
-  const material = new THREE.MeshPhongMaterial({ color: props.color, wireframe: false })
+  const material = new THREE.MeshPhongMaterial({ color: resolveCssVar(props.color), wireframe: false })
   box = new THREE.Mesh(geometry, material)
   scene.add(box)
 })

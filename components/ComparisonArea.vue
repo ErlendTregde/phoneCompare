@@ -42,6 +42,7 @@
 import { inject, reactive, watch, ref } from 'vue'
 import ComparisonShapesView from './ComparisonShapesView.vue'
 import PhoneStatsTable from './PhoneStatsTable.vue'
+import useTheme from '@/composables/useTheme'
 
 const props = defineProps({
   isTableView: Boolean
@@ -56,6 +57,7 @@ const sizePercent = inject('sizePercent')
 const setSizePercent = inject('setSizePercent')
 const increaseSize = inject('increaseSize')
 const decreaseSize = inject('decreaseSize')
+const { isDark } = useTheme()
 const colorPalette = ['#4a9eff', '#ffff4a', '#a44aff', '#ff4a4a', '#ffb84a', '#00e0ff']
 const phoneColorMap = reactive({})
 const isStackedView = ref(false)
@@ -65,20 +67,25 @@ function assignColors() {
   Object.keys(phoneColorMap).forEach(id => {
     if (!selectedPhones.includes(id)) delete phoneColorMap[id]
   })
-  // Assign available colors to uncolored phones
+  // Assign colors, cycling through palette, and add white/black as overflow
   let usedColors = Object.values(phoneColorMap)
-  selectedPhones.forEach(id => {
+  let paletteWithWB = [...colorPalette]
+  if (isDark.value) {
+    paletteWithWB.push('#fff') // white for dark mode
+  } else {
+    paletteWithWB.push('#111') // black for light mode
+  }
+  selectedPhones.forEach((id, idx) => {
     if (!phoneColorMap[id]) {
-      const available = colorPalette.find(c => !usedColors.includes(c))
-      if (available) {
-        phoneColorMap[id] = available
-        usedColors.push(available)
-      }
+      // Cycle through paletteWithWB
+      const color = paletteWithWB[idx % paletteWithWB.length]
+      phoneColorMap[id] = color
+      usedColors.push(color)
     }
   })
 }
 
-watch(selectedPhones, assignColors, { immediate: true, deep: true })
+watch([selectedPhones, isDark], assignColors, { immediate: true, deep: true })
 </script>
 
 <style scoped>
