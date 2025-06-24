@@ -3,10 +3,12 @@
     <div class="logo">📱 Dimensio Compare</div>
     <div :class="['nav-container', { active: isMenuOpen }]">
       <nav class="nav">
-        <NuxtLink to="/">Compare</NuxtLink>
-        <NuxtLink to="/database">Database</NuxtLink>
+        <NuxtLink to="/">Home</NuxtLink>
+        <NuxtLink to="/compare">Compare</NuxtLink>
+        <NuxtLink to="/3d-view">3D View</NuxtLink>
         <NuxtLink to="/reviews">Reviews</NuxtLink>
-        <NuxtLink to="/contact">Contact</NuxtLink>
+        <!-- <NuxtLink to="/database">Database</NuxtLink> -->
+        <!-- <NuxtLink to="/contact">Contact</NuxtLink> -->
       </nav>
       <button class="theme-toggle" @click="toggleTheme" :title="isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
         {{ isDark ? '☀️' : '🌙' }}
