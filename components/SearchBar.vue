@@ -58,7 +58,7 @@ function togglePhone(id) {
     const idx = selectedPhones.indexOf(id);
     if (idx !== -1) {
         selectedPhones.splice(idx, 1);
-    } else if (selectedPhones.length < 6) {
+    } else {
         selectedPhones.push(id);
     }
 }

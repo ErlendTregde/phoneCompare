@@ -182,9 +182,26 @@ function removePhone(id) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.2rem;
   padding-left: 1.5rem;
+  max-height: 480px;
+  overflow-y: auto;
+  /* Custom scrollbar for consistency */
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--section-bg);
+}
+.stacked-info-col::-webkit-scrollbar {
+  width: 8px;
+  background: var(--section-bg);
+  border-radius: 8px;
+}
+.stacked-info-col::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 8px;
+}
+.stacked-info-col::-webkit-scrollbar-thumb:hover {
+  background: #2176bd;
 }
 .phone-info-card-wrapper {
   width: 100%;
@@ -209,6 +226,7 @@ function removePhone(id) {
   }
   .stacked-info-col {
     align-items: center;
+    max-height: 320px;
   }
   .phone-info-card-wrapper {
     margin-left: auto;

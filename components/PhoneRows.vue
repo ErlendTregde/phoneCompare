@@ -1,18 +1,13 @@
 <template>
   <div>
     <div class="phones-row">
-      <PhoneShape v-for="id in topRow" :key="id" :phone="phoneData[id]" :color="colorMap[id]" :view="viewMode"
-        :scale="scaleMode" :show-dimensions="showDimensions" />
-    </div>
-    <div v-if="bottomRow.length" class="phones-row bottom-row">
-      <PhoneShape v-for="id in bottomRow" :key="id" :phone="phoneData[id]" :color="colorMap[id]" :view="viewMode"
+      <PhoneShape v-for="id in selectedPhones" :key="id" :phone="phoneData[id]" :color="colorMap[id]" :view="viewMode"
         :scale="scaleMode" :show-dimensions="showDimensions" />
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
 import PhoneShape from './PhoneShape.vue'
 const props = defineProps({
   phoneData: Object,
@@ -22,8 +17,6 @@ const props = defineProps({
   showDimensions: Boolean,
   colorMap: Object
 })
-const topRow = computed(() => props.selectedPhones.slice(0, 3))
-const bottomRow = computed(() => props.selectedPhones.slice(3, 6))
 </script>
 
 <style scoped>
@@ -34,9 +27,6 @@ const bottomRow = computed(() => props.selectedPhones.slice(3, 6))
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-}
-.bottom-row {
-  margin-top: 2.7rem;
 }
 @media (max-width: 900px) {
   .phones-row {

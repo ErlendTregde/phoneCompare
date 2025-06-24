@@ -25,13 +25,17 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { provide, computed } from 'vue'
 import usePhoneComparisonState from '@/composables/usePhoneComparisonState'
 import Phone3DBox from '@/components/Phone3DBox.vue'
 import PhoneInfoCard from '@/components/PhoneInfoCard.vue'
 import SearchBar from '@/components/SearchBar.vue'
 
 const { selectedPhones, phoneData } = usePhoneComparisonState()
+
+// Provide state for SearchBar and children
+provide('phoneData', phoneData)
+provide('selectedPhones', selectedPhones)
 
 const selectedPhonesList = computed(() => selectedPhones.map(slug => phoneData[slug]).filter(Boolean))
 

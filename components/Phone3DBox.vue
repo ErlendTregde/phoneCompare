@@ -18,6 +18,8 @@ const props = defineProps({
 
 const canvasRef = ref(null)
 let renderer, scene, camera, box, animationId
+let isDragging = false
+let lastX = 0, lastY = 0
 
 const scale = 0.1 // mm to cm
 
@@ -41,8 +43,6 @@ function setupScene() {
 
 function animate() {
   animationId = requestAnimationFrame(animate)
-  box.rotation.y += 0.01
-  box.rotation.x += 0.005
   renderer.render(scene, camera)
 }
 
@@ -54,18 +54,44 @@ function resizeRenderer() {
   camera.updateProjectionMatrix()
 }
 
+function onPointerDown(event) {
+  isDragging = true
+  lastX = event.clientX
+  lastY = event.clientY
+}
+function onPointerMove(event) {
+  if (!isDragging) return
+  const deltaX = event.clientX - lastX
+  const deltaY = event.clientY - lastY
+  lastX = event.clientX
+  lastY = event.clientY
+  if (box) {
+    box.rotation.y += deltaX * 0.01
+    box.rotation.x += deltaY * 0.01
+  }
+}
+function onPointerUp() {
+  isDragging = false
+}
+
 onMounted(() => {
   renderer = new THREE.WebGLRenderer({ canvas: canvasRef.value, alpha: true, antialias: true })
   setupScene()
   resizeRenderer()
   animate()
   window.addEventListener('resize', resizeRenderer)
+  canvasRef.value.addEventListener('pointerdown', onPointerDown)
+  window.addEventListener('pointermove', onPointerMove)
+  window.addEventListener('pointerup', onPointerUp)
 })
 
 onBeforeUnmount(() => {
   cancelAnimationFrame(animationId)
   renderer.dispose()
   window.removeEventListener('resize', resizeRenderer)
+  canvasRef.value.removeEventListener('pointerdown', onPointerDown)
+  window.removeEventListener('pointermove', onPointerMove)
+  window.removeEventListener('pointerup', onPointerUp)
 })
 
 watch(() => [props.width, props.height, props.depth, props.color], () => {
